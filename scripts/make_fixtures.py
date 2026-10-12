@@ -4,14 +4,20 @@
     python scripts/make_fixtures.py
 
 Creates:
-- fixtures/triage_messages_sample.jsonl   ~300 synthetic triage rows
-- fixtures/catalog_listings_sample.jsonl  ~200 synthetic listing rows
+- fixtures/triage_messages_sample.jsonl   300 synthetic triage rows
+- fixtures/catalog_listings_sample.jsonl  200 synthetic listing rows
 
 Everything is produced from a fixed random seed (seed=42) - there is
 no scraping and no network access anywhere in this script. Triage rows
-carry only synthetic clinical fields (symptoms, age band, vitals,
-labels); they contain no names, phone numbers, emails or national IDs.
+carry only synthetic clinical fields (symptoms, age, vitals, labels);
+they contain no names, phone numbers, emails or national IDs.
 Catalog rows are marketplace listings with no clinical fields at all.
+
+Gold labels (expected_urgency / expected_recommendation /
+expected_department) come from src.afyaplus.triage.policy - the same
+module the runtime uses. After the label-drift incident
+(docs/incidents/2026-10-13-fixture-label-drift.md) the generator no
+longer keeps its own copy of the rules.
 """
 
 from __future__ import annotations
@@ -24,6 +30,9 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT))
 
+from src.afyaplus.triage import policy  # noqa: E402
+from src.afyaplus.triage.models import RECOMMENDATION_TOKENS  # noqa: E402
+
 FIXTURES = REPO_ROOT / "fixtures"
 TRIAGE_PATH = FIXTURES / "triage_messages_sample.jsonl"
 CATALOG_PATH = FIXTURES / "catalog_listings_sample.jsonl"
@@ -32,7 +41,6 @@ SEED = 42
 TRIAGE_ROWS = 300
 CATALOG_ROWS = 200
 
-# --- label vocabulary -------------------------------------------------
 URGENCY_LEVELS = ["low", "moderate", "high"]
 
 SYMPTOM_POOL = [
@@ -42,54 +50,6 @@ SYMPTOM_POOL = [
     "shortness_of_breath", "infection", "dehydration", "severe_pain",
 ]
 
-# Symptom -> clinical severity. This table is deliberately kept next to
-# the generator: it is the gold labelling view of the dataset.
-CLINICAL_SEVERITY = {
-    "chest_pain": "high",
-    "shortness_of_breath": "high",
-    "severe_pain": "high",
-    "minor_cut": "high",
-    "fever": "moderate",
-    "vomiting": "moderate",
-    "dehydration": "moderate",
-    "infection": "moderate",
-    "injury": "moderate",
-    "abdominal_pain": "moderate",
-    "headache": "moderate",
-    "dizziness": "moderate",
-    "rash": "moderate",
-    "cough": "low",
-    "mild_fatigue": "low",
-    "routine_checkup": "low",
-    "follow_up": "low",
-    "prescription_refill": "low",
-}
-
-ACUITY_ORDER = ["low", "moderate", "high"]
-
-
-def worst(*levels: str) -> str:
-    return max(levels, key=lambda level: ACUITY_ORDER.index(level))
-
-
-def escalate(level: str) -> str:
-    index = min(ACUITY_ORDER.index(level) + 1, len(ACUITY_ORDER) - 1)
-    return ACUITY_ORDER[index]
-
-
-def department_for(symptoms: list[str], acuity: str) -> str:
-    """Gold routing view: independent of the runtime router table."""
-    text = " ".join(symptoms)
-    if any(token in text for token in ("chest_pain", "minor_cut", "shortness_of_breath")):
-        return "emergency_department"
-    if acuity == "high":
-        return "urgent_care"
-    if any(token in text for token in ("routine_checkup", "follow_up", "prescription_refill")):
-        return "general_practice"
-    if any(token in text for token in ("fever", "vomiting", "infection", "dehydration")):
-        return "urgent_care"
-    return "primary_care"
-
 
 def make_triage_rows() -> list[dict]:
     rng = random.Random(SEED)
@@ -98,51 +58,29 @@ def make_triage_rows() -> list[dict]:
         age = rng.choice(
             [rng.randint(1, 12), rng.randint(18, 49), rng.randint(50, 72), rng.randint(65, 88)]
         )
-        symptoms = rng.sample(SYMPTOM_POOL, k=rng.randint(1, 3))
+        symptoms = sorted(rng.sample(SYMPTOM_POOL, k=rng.randint(1, 3)))
         urgency_level = rng.choice(URGENCY_LEVELS)
         vitals = {
             "temperature": round(rng.uniform(36.4, 39.8), 1),
             "heart_rate": rng.randint(58, 128),
         }
 
-        clinical = "low"
-        for symptom in symptoms:
-            clinical = worst(clinical, CLINICAL_SEVERITY.get(symptom, "low"))
-        if vitals["temperature"] >= 39.5:
-            clinical = worst(clinical, "high")
-        elif vitals["temperature"] >= 38.0:
-            clinical = worst(clinical, "moderate")
-        if vitals["heart_rate"] >= 120 or vitals["heart_rate"] <= 50:
-            clinical = worst(clinical, "high")
-        if age >= 65 or age <= 2:
-            clinical = escalate(clinical)
-
-        expected_urgency = worst(urgency_level, clinical)
+        expected_urgency = policy.compute_acuity(symptoms, age, urgency_level, vitals)
+        endpoint, _reason = policy.decide_endpoint(symptoms, expected_urgency)
 
         rows.append(
             {
                 "id": f"triage-{index:04d}",
                 "age": age,
-                "symptoms": sorted(symptoms),
+                "symptoms": symptoms,
                 "urgency_level": urgency_level,
                 "vitals": vitals,
                 "expected_urgency": expected_urgency,
-                "expected_department": department_for(symptoms, expected_urgency),
+                "expected_recommendation": RECOMMENDATION_TOKENS[expected_urgency],
+                "expected_department": endpoint,
                 "source": "synthetic_generator_seed42",
             }
         )
-    return rows
-
-RECOMMENDATION_TOKENS = {
-    "high": "immediate_attention",
-    "moderate": "within_24_hours",
-    "low": "routine_follow_up",
-}
-
-def finalise_recommendations(rows: list[dict]) -> list[dict]:
-    """Attach the gold disposition token for each row's acuity."""
-    for row in rows:
-        row["expected_recommendation"] = RECOMMENDATION_TOKENS[row["expected_urgency"]]
     return rows
 
 
@@ -197,7 +135,7 @@ def write_jsonl(path: Path, rows: list[dict]) -> None:
 
 
 def main() -> int:
-    triage_rows = finalise_recommendations(make_triage_rows())
+    triage_rows = make_triage_rows()
     catalog_rows = make_catalog_rows()
     write_jsonl(TRIAGE_PATH, triage_rows)
     write_jsonl(CATALOG_PATH, catalog_rows)

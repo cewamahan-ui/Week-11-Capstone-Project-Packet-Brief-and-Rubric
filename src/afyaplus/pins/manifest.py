@@ -56,12 +56,26 @@ def installed_version(distribution: str) -> str | None:
 
 
 def rule_table_digest() -> str:
-    """Fingerprint of the triage rule table that the stub model runs."""
-    from src.afyaplus.triage.domain_twin import SYMPTOM_SEVERITY
+    """Fingerprint of the shared decision policy the stub model runs."""
+    from src.afyaplus.triage import policy
     from src.afyaplus.triage.models import RECOMMENDATION_TOKENS
 
     payload = json.dumps(
-        {"symptom_severity": SYMPTOM_SEVERITY, "recommendations": RECOMMENDATION_TOKENS},
+        {
+            "symptom_severity": policy.SYMPTOM_SEVERITY,
+            "recommendations": RECOMMENDATION_TOKENS,
+            "red_flag_tokens": sorted(policy.RED_FLAG_TOKENS),
+            "routine_tokens": sorted(policy.ROUTINE_TOKENS),
+            "urgent_tokens": sorted(policy.URGENT_TOKENS),
+            "thresholds": {
+                "temp_moderate": policy.TEMP_MODERATE,
+                "temp_high": policy.TEMP_HIGH,
+                "hr_high": policy.HR_HIGH,
+                "hr_low": policy.HR_LOW,
+                "age_high": policy.ESCALATION_AGE_HIGH,
+                "age_low": policy.ESCALATION_AGE_LOW,
+            },
+        },
         sort_keys=True,
     )
     return f"sha256:{sha256_hex(payload.encode('utf-8'))}"

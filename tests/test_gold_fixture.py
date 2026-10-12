@@ -48,7 +48,8 @@ class TestGoldenFixtures:
             request = TriageRequest(
                 symptoms=fixture["symptoms"],
                 age=fixture["age"],
-                urgency_level=fixture.get("urgency_level", "moderate")
+                urgency_level=fixture.get("urgency_level", "moderate"),
+                vitals=fixture.get("vitals", {})
             )
             
             response = self.twin.assess(request)
@@ -69,7 +70,8 @@ class TestGoldenFixtures:
             request = TriageRequest(
                 symptoms=fixture["symptoms"],
                 age=fixture["age"],
-                urgency_level=fixture.get("urgency_level", "moderate")
+                urgency_level=fixture.get("urgency_level", "moderate"),
+                vitals=fixture.get("vitals", {})
             )
             
             response = self.twin.assess(request)
