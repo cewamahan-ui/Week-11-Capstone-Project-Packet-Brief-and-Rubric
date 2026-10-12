@@ -1,0 +1,57 @@
+{
+  "deliverable_1": {
+    "brief": "proposal.md",
+    "matrix": "skill_matrix.md", 
+    "integration": "integration_map.json"
+  },
+  "deliverable_2": {
+    "pytest_configuration": "pytest.ini",
+    "unit_tests": {
+      "router": "tests/test_router.py",
+      "domain_twin": "tests/test_domain_twin.py",
+      "gold_fixture": "tests/test_gold_fixture.py",
+      "stub_service": "tests/test_service_function_stub.py",
+      "pin_fields": "tests/test_pin_fields.py"
+    },
+    "security_smoke": {
+      "test_file": "tests/test_security_smoke.py",
+      "redaction_test": "test_pii_redaction_integration"
+    },
+    "performance": {
+      "measured_file": "perf_stub.json",
+      "measurement_script": "scripts/measure_perf.py"
+    },
+    "ci_presence": ".github/workflows/ci.yml"
+  },
+  "deliverable_3": {
+    "end_to_end_command": "python -m src.afyaplus.main",
+    "transcript_evidence": "docs/demo_transcript.md",
+    "mwp_components": {
+      "auth": "src/afyaplus/triage/auth.py",
+      "rag": "src/afyaplus/rag/",
+      "mcp_tool": "src/afyaplus/mcp/tools.py",
+      "pins": "src/afyaplus/pins/",
+      "security": "src/afyaplus/security/",
+      "eval_score": "scripts/eval_score.py",
+      "fixture": "fixtures/triage_messages_sample.jsonl"
+    }
+  },
+  "deliverable_4": {
+    "architecture": "docs/architecture.md",
+    "deployment": "docs/deployment.md",
+    "cost_analysis": "docs/cost_analysis.md",
+    "user_guide": "docs/user_guide.md",
+    "build_checkpoint": "docs/build_checkpoint.md"
+  },
+  "deliverable_5": {
+    "feature_branch_history": ".git/refs/heads/",
+    "peer_review_checklist": "docs/peer_review_checklist.md",
+    "review_log": "review_log.md",
+    "sprint_board": "sprint_board.json"
+  },
+  "deliverable_6": {
+    "presentation": "docs/presentation.pdf",
+    "presentation_outline": "docs/presentation_outline.md",
+    "demo_command": "start_service.sh"
+  }
+}

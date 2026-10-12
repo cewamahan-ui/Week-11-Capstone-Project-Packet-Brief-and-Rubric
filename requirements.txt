@@ -1,0 +1,8 @@
+# Pinned runtime and test dependencies (Week 8 pin discipline).
+# Versions match the environment the capstone was built and tested in.
+fastapi==0.140.13
+starlette==1.3.1
+pydantic==2.13.4
+uvicorn==0.51.0
+httpx==0.28.1
+pytest==9.0.2
