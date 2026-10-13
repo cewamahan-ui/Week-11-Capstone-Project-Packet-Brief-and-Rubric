@@ -2,9 +2,11 @@
 
 Tokens are HMAC-SHA256 signed, compact JWT-style strings
 (``base64url(header).base64url(payload).signature``). There is no
-external identity provider: the demo secret comes from the
-``AFYA_TOKEN_SECRET`` environment variable and falls back to a
-clearly-labelled local placeholder so the stub path runs anywhere.
+external identity provider: the signing secret comes from the
+``AFYA_TOKEN_SECRET`` environment variable. When the variable is
+unset (automated tests, local demo) a random per-process secret is
+used instead - nothing secret is ever written into the repository,
+and tokens only stay valid for the process that issued them.
 """
 
 from __future__ import annotations
@@ -14,12 +16,15 @@ import hashlib
 import hmac
 import json
 import os
+import secrets
 import time
 from typing import Optional
 
-DEFAULT_SECRET = "local-demo-secret-change-me"
 TOKEN_TTL_SECONDS = 3600
 VALID_ROLES = ("clinician", "viewer", "analyst")
+
+# Generated once per process when AFYA_TOKEN_SECRET is not set.
+_EPHEMERAL_SECRET = secrets.token_hex(32)
 
 
 class AuthError(Exception):
@@ -36,8 +41,8 @@ def _b64decode(data: str) -> bytes:
 
 
 def get_secret() -> str:
-    """Resolve the signing secret (env first, dev placeholder second)."""
-    return os.environ.get("AFYA_TOKEN_SECRET", DEFAULT_SECRET)
+    """Env-configured secret, else a per-process ephemeral one."""
+    return os.environ.get("AFYA_TOKEN_SECRET") or _EPHEMERAL_SECRET
 
 
 def _sign(signing_input: str, secret: str) -> str:

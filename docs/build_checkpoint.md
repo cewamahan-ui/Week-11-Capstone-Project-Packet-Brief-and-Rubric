@@ -43,8 +43,9 @@ under deferred, not under works.
   which it did: the pre-fix run scored 0.6833 on the same rows
   (incident note). Treat 1.0000 as "contract consistent", not
   "clinically accurate".
-- The default token secret is a development placeholder; anything
-  beyond localhost must set `AFYA_TOKEN_SECRET`.
+- Token signing uses a random per-process secret unless
+  `AFYA_TOKEN_SECRET` is set; anything beyond localhost (or running
+  multiple workers) must set it explicitly.
 - The dataset is one seeded synthetic sample (seed=42), not a
   population estimate.
 - The in-process HTTP perf case includes framework overhead but no

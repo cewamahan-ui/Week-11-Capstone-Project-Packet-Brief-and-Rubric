@@ -86,7 +86,7 @@ Environment variables (all optional):
 
 | Variable | Default | Purpose |
 |----------|---------|---------|
-| `AFYA_TOKEN_SECRET` | dev placeholder | token signing secret - **set this for anything non-local** |
+| `AFYA_TOKEN_SECRET` | random per-process secret | token signing secret - **set this for anything non-local or multi-worker** |
 | `AFYA_MCP_URL` | unset (stub) | real MCP server endpoint |
 | `HOST` / `PORT` | `127.0.0.1` / `8000` | service bind address |
 

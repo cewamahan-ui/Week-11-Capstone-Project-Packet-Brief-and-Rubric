@@ -196,7 +196,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 16 0 R >>
 endobj
 18 0 obj
-<< /Length 1579 >>
+<< /Length 1585 >>
 stream
 1.000 1.000 1.000 rg 0.0 0.0 960.0 540.0 re f
 0.055 0.463 0.431 rg 0.0 466.0 960.0 74.0 re f
@@ -208,7 +208,7 @@ BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 403.0 Tm (- Redaction at the ed
 BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 382.0 Tm (- Repo hygiene: CI scans every text file for key patterns; no .env committed) Tj ET
 BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 361.0 Tm (- Fixtures: synthetic only, identifier fields rejected by tests) Tj ET
 BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 340.0 Tm (- Data lines separated: clinical fixture vs catalog fixture, asserted both ways) Tj ET
-BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 319.0 Tm (- Secrets from env \(AFYA_TOKEN_SECRET\), dev placeholder clearly labelled) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 319.0 Tm (- Secrets from env \(AFYA_TOKEN_SECRET\); ephemeral per-process secret otherwise) Tj ET
 0.949 0.957 0.965 rg 48.0 281.0 864.0 22.0 re f
 BT /F3 13 Tf 0.035 0.302 0.282 rg 1 0 0 1 58.0 286.0 Tm (No production data, no scraping, no live provider calls in this build.) Tj ET
 0.850 0.870 0.890 RG 1.0 w 40.0 46.0 m 920.0 46.0 l S
@@ -344,15 +344,15 @@ xref
 0000011920 00000 n 
 0000013788 00000 n 
 0000013936 00000 n 
-0000015568 00000 n 
-0000015716 00000 n 
-0000018537 00000 n 
-0000018685 00000 n 
-0000021017 00000 n 
-0000021165 00000 n 
-0000022823 00000 n 
+0000015574 00000 n 
+0000015722 00000 n 
+0000018543 00000 n 
+0000018691 00000 n 
+0000021023 00000 n 
+0000021171 00000 n 
+0000022829 00000 n 
 trailer
 << /Size 26 /Root 1 0 R >>
 startxref
-22971
+22977
 %%EOF

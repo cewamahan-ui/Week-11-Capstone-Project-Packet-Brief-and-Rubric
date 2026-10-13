@@ -142,7 +142,7 @@ SLIDES: list[dict] = [
             ("b", "Repo hygiene: CI scans every text file for key patterns; no .env committed"),
             ("b", "Fixtures: synthetic only, identifier fields rejected by tests"),
             ("b", "Data lines separated: clinical fixture vs catalog fixture, asserted both ways"),
-            ("b", "Secrets from env (AFYA_TOKEN_SECRET), dev placeholder clearly labelled"),
+            ("b", "Secrets from env (AFYA_TOKEN_SECRET); ephemeral per-process secret otherwise"),
             ("sp", ""),
             ("c", "No production data, no scraping, no live provider calls in this build."),
         ],

@@ -78,7 +78,7 @@ Suggested shape if executed later:
 
 | Variable | Required | Default | Purpose |
 |----------|----------|---------|---------|
-| `AFYA_TOKEN_SECRET` | no | `local-demo-secret-change-me` (dev placeholder) | HMAC signing secret for bearer tokens |
+| `AFYA_TOKEN_SECRET` | no | random per-process secret | HMAC signing secret for bearer tokens; **set explicitly for multi-worker or long-lived deployments** |
 | `AFYA_MCP_URL` | no | unset (forces stub MCP path) | Real MCP server, if ever wired |
 | `HOST` / `PORT` | no | `127.0.0.1` / `8000` | Bind address for `start_service.sh` |
 

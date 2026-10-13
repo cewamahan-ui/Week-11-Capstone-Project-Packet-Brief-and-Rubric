@@ -92,7 +92,7 @@ POST /triage  +  Authorization: Bearer <token>
 | Model | `DomainTwin` rules | hosted LLM behind the same interface |
 | MCP | `MCPTools.execute` fallback | server reachable at `AFYA_MCP_URL` |
 | Retrieval | token overlap | vector index |
-| Auth secret | `AFYA_TOKEN_SECRET` env / dev placeholder | managed secret store |
+| Auth secret | `AFYA_TOKEN_SECRET` env / ephemeral per-process secret | managed secret store |
 
 The fallbacks are declared in the README; automated tests force the
 stub path (`AFYA_MCP_URL` unset), so CI can never spend money.
