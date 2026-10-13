@@ -1,0 +1,49 @@
+{
+  "manifest_version": "1.0",
+  "generated_at": "2026-10-12T23:22:38Z",
+  "generated_by": "python -m src.afyaplus.pins.manifest",
+  "components": [
+    {
+      "name": "afyaplus-api",
+      "version": "1.0.0",
+      "source": "local",
+      "digest": "sha256:3e81173b07155cece189a38424f8529b66709ffce3b6c48aca47f7dfc755be8c"
+    },
+    {
+      "name": "fastapi",
+      "version": "0.140.13",
+      "source": "pypi",
+      "digest": "sha256:8426aaee9575e65163756658195f8e9f6ac91d2710db9c7bb3f4dca0de3407ec"
+    },
+    {
+      "name": "pydantic",
+      "version": "2.13.4",
+      "source": "pypi",
+      "digest": "sha256:ef3359e4f1ef2f2420c267c3b87df123e4e4e71f9779a671cd8df6637c88dc79"
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.51.0",
+      "source": "pypi",
+      "digest": "sha256:2712ab0ea0287742c9baa6a8cab8c5dba1bdf7ddca138f7da1e09b8e82fc3ff9"
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "source": "pypi",
+      "digest": "sha256:5fadf5f6ea5bd1b141ea05745cb52449bdccde939c22e76231e7993c2afc91d0"
+    },
+    {
+      "name": "pytest",
+      "version": "9.0.2",
+      "source": "pypi",
+      "digest": "sha256:c2f6c1fc67a109185788c41f183cc2527ce034322f3ec6fc2b9171b4d23c454a"
+    }
+  ],
+  "model_pin": {
+    "name": "triage-stub-model",
+    "version": "twin-rules-1.1",
+    "backend": "deterministic-stub",
+    "digest": "sha256:19444215b11be1ae12efb245972e4bd9d6f851574f6bf5f78eff741c5f49118f"
+  }
+}

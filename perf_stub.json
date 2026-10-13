@@ -1,0 +1,61 @@
+{
+  "generated_at": "2026-10-12T23:27:44Z",
+  "generated_by": "scripts/measure_perf.py",
+  "environment": {
+    "python": "3.14.3",
+    "platform": "Windows-11-10.0.22631-SP0",
+    "mode": "stub (no network)"
+  },
+  "warmup_iterations": 20,
+  "cases": [
+    {
+      "case": "router.route",
+      "iterations": 300,
+      "mean_ms": 0.0441,
+      "p50_ms": 0.0347,
+      "p95_ms": 0.0504,
+      "max_ms": 0.9735
+    },
+    {
+      "case": "domain_twin.assess",
+      "iterations": 300,
+      "mean_ms": 0.1054,
+      "p50_ms": 0.0541,
+      "p95_ms": 0.1512,
+      "max_ms": 10.8445
+    },
+    {
+      "case": "rag_retriever.search",
+      "iterations": 300,
+      "mean_ms": 0.3577,
+      "p50_ms": 0.1821,
+      "p95_ms": 0.8704,
+      "max_ms": 9.9723
+    },
+    {
+      "case": "mcp_tool.execute_stub",
+      "iterations": 300,
+      "mean_ms": 0.025,
+      "p50_ms": 0.0131,
+      "p95_ms": 0.0515,
+      "max_ms": 0.3844
+    },
+    {
+      "case": "security.redact",
+      "iterations": 300,
+      "mean_ms": 0.0839,
+      "p50_ms": 0.0396,
+      "p95_ms": 0.1408,
+      "max_ms": 5.9248
+    },
+    {
+      "case": "http_post_triage_inprocess",
+      "iterations": 100,
+      "mean_ms": 11.7714,
+      "p50_ms": 9.7738,
+      "p95_ms": 18.322,
+      "max_ms": 42.3984
+    }
+  ],
+  "notes": "Measured locally on the stub path; no LLM or MCP server involved. The http case uses FastAPI's in-process TestClient, so it includes framework overhead but no socket latency."
+}
