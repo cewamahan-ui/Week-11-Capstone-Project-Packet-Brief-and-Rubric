@@ -1,0 +1,10 @@
+# Generated artefacts must never be EOL-converted (a CRLF swap
+# breaks the PDF xref table and PNG payloads).
+*.pdf binary
+*.png binary
+
+# Fixture data stays byte-stable across platforms.
+*.jsonl text eol=lf
+*.json text eol=lf
+*.py text eol=lf
+*.md text eol=lf
