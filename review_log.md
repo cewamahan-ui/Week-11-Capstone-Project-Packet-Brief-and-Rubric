@@ -16,7 +16,7 @@
 
 | # | Severity | Finding | Outcome |
 |---|----------|---------|---------|
-| 1 | Blocker | Golden test red: fixture labels and runtime disagreed on 95/300 rows (duplicated rule tables, acuity-blind router) | Fixed in `06ec11a` via shared `triage/policy.py`; fixture regenerated with same seed. Incident: `docs/incidents/2026-10-13-fixture-label-drift.md`. |
+| 1 | Blocker | Golden test red: fixture labels and runtime disagreed on 95/300 rows (duplicated rule tables, acuity-blind router) | Fixed in `06ec11a` via shared `triage/policy.py`; fixture re-built with the same seed. Incident: `docs/incidents/2026-10-13-fixture-label-drift.md`. |
 | 2 | Major | Golden test harness never forwarded `vitals`, so vitals-driven rows could not match | Fixed field mapping (`vitals=fixture.get("vitals", {})`); assertions untouched. Re-verified: `55 passed`. |
 | 3 | Minor | `pytest.ini` declared `asyncio_mode` without `pytest-asyncio` installed (warning each run) | Removed; markers and unit-default `-m "not integration"` documented instead. |
 | 4 | Minor | Demo transcripts contained a usable bearer token | Token truncated in `docs/evidence/api_transcript.txt`; reproduction docs use `$TOKEN` variable only. |
