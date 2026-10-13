@@ -1,0 +1,45 @@
+AfyaPlus Module 4 Capstone - end-to-end run (stub mode)
+version: 1.0.0
+
+== 1. pins ==
+components: 6  ok: True
+problems: none
+
+== 2. security / redaction ==
+raw    : Callback for Jane Otieno on 0712345678 or jane.otieno@example.com, ID 34817291, DOB 1985-06-21.
+redacted: Callback for Jane Otieno on [PHONE] or [EMAIL], ID [ID], DOB [DOB].
+contains_pii(raw)=True  contains_pii(redacted)=False
+
+== 3. auth ==
+issued for sub=demo-clinician role=clinician
+tampered token: rejected (signature mismatch)
+
+== 4. RAG ==
+fixture rows ingested: 300  protocol docs built: 5
+  guideline-sepsis  score=2  Sepsis red flags
+  guideline-cardiology  score=1  Cardiology review pathway
+  guideline-cost  score=0  Cost and token discipline
+
+== 5. triage (router + domain twin) ==
+  ['chest_pain'] age=58 -> emergency_department acuity=high     immediate_attention p=4 conf=0.85
+  ['fever', 'cough'] age=27 -> urgent_care        acuity=moderate within_24_hours p=3 conf=0.95
+  ['routine_checkup'] age=40 -> general_practice   acuity=low      routine_follow_up p=2 conf=0.85
+
+== 6. MCP tool (stub fallback) ==
+status=stub  reason=fallback to stub: MCP server not configured (AFYA_MCP_URL unset)
+clinics: 2
+
+== 7. catalog search (marketplace fixture, no clinical data) ==
+catalog rows: 200  'gloves' hits: 5
+
+== 8. cost ledger ==
+summary: {'entries': 3, 'total_api_calls': 0, 'total_cost_usd': 0.0, 'mode': 'stub'}
+
+== 9. golden-set evaluation ==
+EVAL SCORE: 1.0000  (300/300 rows exact)
+acuity_accuracy=1.0  recommendation_accuracy=1.0  endpoint_accuracy=1.0
+mismatches: 0
+
+== result ==
+RUN COMPLETE
+mode=stub  api_calls=0  spend=$0.00

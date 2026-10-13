@@ -1,0 +1,358 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R 23 0 R 25 0 R] /Count 10 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Length 1555 >>
+stream
+1.000 1.000 1.000 rg 0.0 0.0 960.0 540.0 re f
+0.055 0.463 0.431 rg 0.0 466.0 960.0 74.0 re f
+0.914 0.635 0.157 rg 0.0 460.0 960.0 6.0 re f
+BT /F2 26 Tf 1.000 1.000 1.000 rg 1 0 0 1 40.0 490.0 Tm (1. Problem and user) Tj ET
+BT /F1 14 Tf 1.000 1.000 1.000 rg 1 0 0 1 760.0 494.0 Tm (AfyaPlus Capstone) Tj ET
+BT /F2 16.5 Tf 0.035 0.302 0.282 rg 1 0 0 1 50.0 414.0 Tm (Who) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 390.0 Tm (- Clinical officers and nurses at small clinics making triage calls under time pressure) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 369.0 Tm (- Ops leads who must audit decisions and control AI cost) Tj ET
+BT /F2 16.5 Tf 0.035 0.302 0.282 rg 1 0 0 1 50.0 326.0 Tm (Problem) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 302.0 Tm (- Paper protocols differ per site - inconsistent acuity calls, no audit trail) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 281.0 Tm (- Free-text notes carry phone numbers and IDs into logs) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 260.0 Tm (- Unclear which model/rules produced a decision, and what it cost) Tj ET
+0.949 0.957 0.965 rg 48.0 222.0 864.0 22.0 re f
+BT /F3 13 Tf 0.035 0.302 0.282 rg 1 0 0 1 58.0 227.0 Tm (AfyaPlus: one authenticated triage service with deterministic, inspectable decisions.) Tj ET
+0.850 0.870 0.890 RG 1.0 w 40.0 46.0 m 920.0 46.0 l S
+BT /F1 11 Tf 0.420 0.450 0.480 rg 1 0 0 1 40.0 26.0 Tm (Module 4 Capstone - presented Week 12 Monday) Tj ET
+BT /F1 11 Tf 0.420 0.450 0.480 rg 1 0 0 1 880.0 26.0 Tm (1 / 10) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 1777 >>
+stream
+1.000 1.000 1.000 rg 0.0 0.0 960.0 540.0 re f
+0.055 0.463 0.431 rg 0.0 466.0 960.0 74.0 re f
+0.914 0.635 0.157 rg 0.0 460.0 960.0 6.0 re f
+BT /F2 26 Tf 1.000 1.000 1.000 rg 1 0 0 1 40.0 490.0 Tm (2. Path chosen and why) Tj ET
+BT /F1 14 Tf 1.000 1.000 1.000 rg 1 0 0 1 760.0 494.0 Tm (AfyaPlus Capstone) Tj ET
+BT /F2 16.5 Tf 0.035 0.302 0.282 rg 1 0 0 1 50.0 414.0 Tm (Path: AfyaPlus Module 4 Capstone \(recommended\)) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 390.0 Tm (- Weeks 1-5: LLM/RAG fundamentals -> router + RAG layer) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 369.0 Tm (- Week 6: Triage API -> /health /token /triage with auth) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 348.0 Tm (- Week 7: Cost / MCP logistics -> tool stubs + cost ledger) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 327.0 Tm (- Week 8: Pins / versioning -> manifest + pin-field tests) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 306.0 Tm (- Week 9: Security -> redaction + security smoke + repo secret scan) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 285.0 Tm (- Week 10: Catalog -> marketplace fixture line \(poster path not taken\)) Tj ET
+0.949 0.957 0.965 rg 48.0 247.0 864.0 22.0 re f
+BT /F3 13 Tf 0.035 0.302 0.282 rg 1 0 0 1 58.0 252.0 Tm (Why: one coherent product demonstrates the whole skill checklist.) Tj ET
+0.949 0.957 0.965 rg 48.0 225.0 864.0 22.0 re f
+BT /F3 13 Tf 0.035 0.302 0.282 rg 1 0 0 1 58.0 230.0 Tm (Mapping: skill_matrix.md + integration_map.json \(week_reuse\).) Tj ET
+0.850 0.870 0.890 RG 1.0 w 40.0 46.0 m 920.0 46.0 l S
+BT /F1 11 Tf 0.420 0.450 0.480 rg 1 0 0 1 40.0 26.0 Tm (Module 4 Capstone - presented Week 12 Monday) Tj ET
+BT /F1 11 Tf 0.420 0.450 0.480 rg 1 0 0 1 880.0 26.0 Tm (2 / 10) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 2976 >>
+stream
+1.000 1.000 1.000 rg 0.0 0.0 960.0 540.0 re f
+0.055 0.463 0.431 rg 0.0 466.0 960.0 74.0 re f
+0.914 0.635 0.157 rg 0.0 460.0 960.0 6.0 re f
+BT /F2 26 Tf 1.000 1.000 1.000 rg 1 0 0 1 40.0 490.0 Tm (3. Architecture - module boundaries) Tj ET
+BT /F1 14 Tf 1.000 1.000 1.000 rg 1 0 0 1 760.0 494.0 Tm (AfyaPlus Capstone) Tj ET
+0.949 0.957 0.965 rg 40.0 122.0 880.0 322.0 re f
+BT /F3 12.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 424.0 Tm (                 +--------------------------------------+) Tj ET
+BT /F3 12.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 407.0 Tm (                 |   triage/policy.py  \(single ruleset\)  |) Tj ET
+BT /F3 12.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 390.0 Tm (                 | acuity: symptoms+vitals+age | routing  |) Tj ET
+BT /F3 12.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 373.0 Tm (                 +----+----------------+-----------------+) Tj ET
+BT /F3 12.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 356.0 Tm (                      |                |) Tj ET
+BT /F3 12.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 339.0 Tm (        +---------------v----+   +-----v--------------+) Tj ET
+BT /F3 12.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 322.0 Tm (        | domain_twin.py     |   | router/deterministic|) Tj ET
+BT /F3 12.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 305.0 Tm (        | assess/recommend   |   | endpoint + priority |) Tj ET
+BT /F3 12.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 288.0 Tm (        +---------+----------+   +---------+-----------+) Tj ET
+BT /F3 12.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 271.0 Tm (                  +------v-----------------v---+) Tj ET
+BT /F3 12.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 254.0 Tm (   POST /triage ->| triage/api.py + auth.py    |<- GET /health) Tj ET
+BT /F3 12.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 237.0 Tm (                  | 401/403/422, redact note   |) Tj ET
+BT /F3 12.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 220.0 Tm (                  +--+----------+----------+---+) Tj ET
+BT /F3 12.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 203.0 Tm (                     |          |          |) Tj ET
+BT /F3 12.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 186.0 Tm (        rag/ \(ingest+retriever\)  mcp/ \(tools+cost\)   pins/ \(manifest\)) Tj ET
+BT /F3 12.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 169.0 Tm (        security/ \(redaction\)    catalog/ \(marketplace search\)) Tj ET
+BT /F3 12.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 152.0 Tm (                     |) Tj ET
+BT /F3 12.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 135.0 Tm (        fixtures/ 300 triage + 200 catalog rows \(seeded, no scrape\)) Tj ET
+0.949 0.957 0.965 rg 48.0 95.0 864.0 22.0 re f
+BT /F3 13 Tf 0.035 0.302 0.282 rg 1 0 0 1 58.0 100.0 Tm (One ruleset feeds assessment, routing and gold labels - stub mode end to end) Tj ET
+0.850 0.870 0.890 RG 1.0 w 40.0 46.0 m 920.0 46.0 l S
+BT /F1 11 Tf 0.420 0.450 0.480 rg 1 0 0 1 40.0 26.0 Tm (Module 4 Capstone - presented Week 12 Monday) Tj ET
+BT /F1 11 Tf 0.420 0.450 0.480 rg 1 0 0 1 880.0 26.0 Tm (3 / 10) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 2296 >>
+stream
+1.000 1.000 1.000 rg 0.0 0.0 960.0 540.0 re f
+0.055 0.463 0.431 rg 0.0 466.0 960.0 74.0 re f
+0.914 0.635 0.157 rg 0.0 460.0 960.0 6.0 re f
+BT /F2 26 Tf 1.000 1.000 1.000 rg 1 0 0 1 40.0 490.0 Tm (4. Skill coverage - which skills, where in repo) Tj ET
+BT /F1 14 Tf 1.000 1.000 1.000 rg 1 0 0 1 760.0 494.0 Tm (AfyaPlus Capstone) Tj ET
+BT /F2 13.5 Tf 0.035 0.302 0.282 rg 1 0 0 1 56.0 424.0 Tm (Weeks 1-5 ) Tj ET
+BT /F1 13.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 180.0 424.0 Tm (src/afyaplus/rag/, router/deterministic.py, evaluation.py) Tj ET
+BT /F2 13.5 Tf 0.035 0.302 0.282 rg 1 0 0 1 56.0 401.0 Tm (Week 6    ) Tj ET
+BT /F1 13.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 180.0 401.0 Tm (triage/api.py, triage/auth.py, tests/test_api.py) Tj ET
+BT /F2 13.5 Tf 0.035 0.302 0.282 rg 1 0 0 1 56.0 378.0 Tm (Week 7    ) Tj ET
+BT /F1 13.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 180.0 378.0 Tm (mcp/tools.py, mcp/cost_tracker.py, docs/cost_analysis.md) Tj ET
+BT /F2 13.5 Tf 0.035 0.302 0.282 rg 1 0 0 1 56.0 355.0 Tm (Week 8    ) Tj ET
+BT /F1 13.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 180.0 355.0 Tm (pins/manifest.py + manager.py, tests/test_pin_fields.py) Tj ET
+BT /F2 13.5 Tf 0.035 0.302 0.282 rg 1 0 0 1 56.0 332.0 Tm (Week 9    ) Tj ET
+BT /F1 13.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 180.0 332.0 Tm (security/redaction.py, tests/test_security_smoke.py) Tj ET
+BT /F2 13.5 Tf 0.035 0.302 0.282 rg 1 0 0 1 56.0 309.0 Tm (Week 10   ) Tj ET
+BT /F1 13.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 180.0 309.0 Tm (catalog/service.py, fixtures/catalog_listings_sample.jsonl) Tj ET
+BT /F2 13.5 Tf 0.035 0.302 0.282 rg 1 0 0 1 56.0 286.0 Tm (Cross     ) Tj ET
+BT /F1 13.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 180.0 286.0 Tm (pytest.ini tiers, perf_stub.json, docs pack, git flow) Tj ET
+0.949 0.957 0.965 rg 48.0 246.0 864.0 22.0 re f
+BT /F3 13 Tf 0.035 0.302 0.282 rg 1 0 0 1 58.0 251.0 Tm (Full mapping: skill_matrix.md \(required/optional per row\)) Tj ET
+0.949 0.957 0.965 rg 48.0 224.0 864.0 22.0 re f
+BT /F3 13 Tf 0.035 0.302 0.282 rg 1 0 0 1 58.0 229.0 Tm (Machine readable: integration_map.json -> week_reuse) Tj ET
+0.850 0.870 0.890 RG 1.0 w 40.0 46.0 m 920.0 46.0 l S
+BT /F1 11 Tf 0.420 0.450 0.480 rg 1 0 0 1 40.0 26.0 Tm (Module 4 Capstone - presented Week 12 Monday) Tj ET
+BT /F1 11 Tf 0.420 0.450 0.480 rg 1 0 0 1 880.0 26.0 Tm (4 / 10) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 1839 >>
+stream
+1.000 1.000 1.000 rg 0.0 0.0 960.0 540.0 re f
+0.055 0.463 0.431 rg 0.0 466.0 960.0 74.0 re f
+0.914 0.635 0.157 rg 0.0 460.0 960.0 6.0 re f
+BT /F2 26 Tf 1.000 1.000 1.000 rg 1 0 0 1 40.0 490.0 Tm (5. Live demo) Tj ET
+BT /F1 14 Tf 1.000 1.000 1.000 rg 1 0 0 1 760.0 494.0 Tm (AfyaPlus Capstone) Tj ET
+BT /F2 16.5 Tf 0.035 0.302 0.282 rg 1 0 0 1 50.0 414.0 Tm (Three commands) Tj ET
+0.949 0.957 0.965 rg 48.0 385.0 864.0 22.0 re f
+BT /F3 13 Tf 0.035 0.302 0.282 rg 1 0 0 1 58.0 390.0 Tm ($ ./start_service.sh) Tj ET
+0.949 0.957 0.965 rg 48.0 363.0 864.0 22.0 re f
+BT /F3 13 Tf 0.035 0.302 0.282 rg 1 0 0 1 58.0 368.0 Tm ($ curl -i http://127.0.0.1:8000/health) Tj ET
+0.949 0.957 0.965 rg 48.0 341.0 864.0 22.0 re f
+BT /F3 13 Tf 0.035 0.302 0.282 rg 1 0 0 1 58.0 346.0 Tm ($ TOKEN=$\(curl -s -X POST .../token ...\) && curl -i .../triage -H "Bearer $TOKEN" ...) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 312.0 Tm (- On screen: 200 health -> token -> triage with a PII note) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 291.0 Tm (- Response shows redacted_note: 'Call [PHONE] or [EMAIL] about the fever') Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 270.0 Tm (- Server log prints the redacted note only) Tj ET
+BT /F2 16.5 Tf 0.035 0.302 0.282 rg 1 0 0 1 50.0 227.0 Tm (Backup if the network misbehaves) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 203.0 Tm (- docs/demo_transcript.md - 60-second step-by-step with real output) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 182.0 Tm (- docs/evidence/api_transcript.txt - full headers for 200/401/403/422) Tj ET
+0.850 0.870 0.890 RG 1.0 w 40.0 46.0 m 920.0 46.0 l S
+BT /F1 11 Tf 0.420 0.450 0.480 rg 1 0 0 1 40.0 26.0 Tm (Module 4 Capstone - presented Week 12 Monday) Tj ET
+BT /F1 11 Tf 0.420 0.450 0.480 rg 1 0 0 1 880.0 26.0 Tm (5 / 10) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Length 1815 >>
+stream
+1.000 1.000 1.000 rg 0.0 0.0 960.0 540.0 re f
+0.055 0.463 0.431 rg 0.0 466.0 960.0 74.0 re f
+0.914 0.635 0.157 rg 0.0 460.0 960.0 6.0 re f
+BT /F2 26 Tf 1.000 1.000 1.000 rg 1 0 0 1 40.0 490.0 Tm (6. Testing evidence) Tj ET
+BT /F1 14 Tf 1.000 1.000 1.000 rg 1 0 0 1 760.0 494.0 Tm (AfyaPlus Capstone) Tj ET
+0.949 0.957 0.965 rg 48.0 419.0 864.0 22.0 re f
+BT /F3 13 Tf 0.035 0.302 0.282 rg 1 0 0 1 58.0 424.0 Tm ($ pytest -q -> 55 passed, 12 deselected) Tj ET
+0.949 0.957 0.965 rg 48.0 397.0 864.0 22.0 re f
+BT /F3 13 Tf 0.035 0.302 0.282 rg 1 0 0 1 58.0 402.0 Tm ($ pytest -m integration -> 12 passed, 55 deselected) Tj ET
+0.949 0.957 0.965 rg 48.0 375.0 864.0 22.0 re f
+BT /F3 13 Tf 0.035 0.302 0.282 rg 1 0 0 1 58.0 380.0 Tm ($ python scripts/eval_score.py -> EVAL SCORE: 1.0000 \(300/300 rows\)) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 346.0 Tm (- Security smoke: real redaction test, repo secret scan, token tamper checks) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 325.0 Tm (- Pin test: source digest + requirements must match the manifest) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 304.0 Tm (- Perf \(p95\): route 0.05ms | twin 0.15ms | retriever 0.87ms | HTTP 18.3ms) Tj ET
+BT /F2 16.5 Tf 0.035 0.302 0.282 rg 1 0 0 1 50.0 261.0 Tm (The test that earned its keep) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 237.0 Tm (- Golden set caught label drift: pre-fix eval 0.6833, 95/300 rows wrong) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 216.0 Tm (- Fix: shared policy module - incident note in docs/incidents/) Tj ET
+0.850 0.870 0.890 RG 1.0 w 40.0 46.0 m 920.0 46.0 l S
+BT /F1 11 Tf 0.420 0.450 0.480 rg 1 0 0 1 40.0 26.0 Tm (Module 4 Capstone - presented Week 12 Monday) Tj ET
+BT /F1 11 Tf 0.420 0.450 0.480 rg 1 0 0 1 880.0 26.0 Tm (6 / 10) Tj ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 16 0 R >>
+endobj
+18 0 obj
+<< /Length 1579 >>
+stream
+1.000 1.000 1.000 rg 0.0 0.0 960.0 540.0 re f
+0.055 0.463 0.431 rg 0.0 466.0 960.0 74.0 re f
+0.914 0.635 0.157 rg 0.0 460.0 960.0 6.0 re f
+BT /F2 26 Tf 1.000 1.000 1.000 rg 1 0 0 1 40.0 490.0 Tm (7. Security and compliance choices) Tj ET
+BT /F1 14 Tf 1.000 1.000 1.000 rg 1 0 0 1 760.0 494.0 Tm (AfyaPlus Capstone) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 424.0 Tm (- Auth: HMAC-SHA256 bearer tokens - 401 without/invalid, 403 for wrong role) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 403.0 Tm (- Redaction at the edge: raw PII never echoed, never logged \(shown live\)) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 382.0 Tm (- Repo hygiene: CI scans every text file for key patterns; no .env committed) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 361.0 Tm (- Fixtures: synthetic only, identifier fields rejected by tests) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 340.0 Tm (- Data lines separated: clinical fixture vs catalog fixture, asserted both ways) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 319.0 Tm (- Secrets from env \(AFYA_TOKEN_SECRET\), dev placeholder clearly labelled) Tj ET
+0.949 0.957 0.965 rg 48.0 281.0 864.0 22.0 re f
+BT /F3 13 Tf 0.035 0.302 0.282 rg 1 0 0 1 58.0 286.0 Tm (No production data, no scraping, no live provider calls in this build.) Tj ET
+0.850 0.870 0.890 RG 1.0 w 40.0 46.0 m 920.0 46.0 l S
+BT /F1 11 Tf 0.420 0.450 0.480 rg 1 0 0 1 40.0 26.0 Tm (Module 4 Capstone - presented Week 12 Monday) Tj ET
+BT /F1 11 Tf 0.420 0.450 0.480 rg 1 0 0 1 880.0 26.0 Tm (7 / 10) Tj ET
+endstream
+endobj
+19 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 18 0 R >>
+endobj
+20 0 obj
+<< /Length 2768 >>
+stream
+1.000 1.000 1.000 rg 0.0 0.0 960.0 540.0 re f
+0.055 0.463 0.431 rg 0.0 466.0 960.0 74.0 re f
+0.914 0.635 0.157 rg 0.0 460.0 960.0 6.0 re f
+BT /F2 26 Tf 1.000 1.000 1.000 rg 1 0 0 1 40.0 490.0 Tm (8. Cost table with assumptions) Tj ET
+BT /F1 14 Tf 1.000 1.000 1.000 rg 1 0 0 1 760.0 494.0 Tm (AfyaPlus Capstone) Tj ET
+0.035 0.302 0.282 rg 48.0 392.0 864.0 26.0 re f
+BT /F2 15 Tf 1.000 1.000 1.000 rg 1 0 0 1 56.0 398.0 Tm (Step) Tj ET
+BT /F2 15 Tf 1.000 1.000 1.000 rg 1 0 0 1 560.0 398.0 Tm (API calls) Tj ET
+BT /F2 15 Tf 1.000 1.000 1.000 rg 1 0 0 1 720.0 398.0 Tm (Cost) Tj ET
+BT /F1 15 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 372.0 Tm (Unit + security + golden tests) Tj ET
+BT /F1 15 Tf 0.106 0.122 0.137 rg 1 0 0 1 560.0 372.0 Tm (0) Tj ET
+BT /F1 15 Tf 0.106 0.122 0.137 rg 1 0 0 1 720.0 372.0 Tm ($0.00) Tj ET
+BT /F1 15 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 346.0 Tm (Integration tests \(in-process\)) Tj ET
+BT /F1 15 Tf 0.106 0.122 0.137 rg 1 0 0 1 560.0 346.0 Tm (0) Tj ET
+BT /F1 15 Tf 0.106 0.122 0.137 rg 1 0 0 1 720.0 346.0 Tm ($0.00) Tj ET
+BT /F1 15 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 320.0 Tm (Golden-set eval, 300 rows) Tj ET
+BT /F1 15 Tf 0.106 0.122 0.137 rg 1 0 0 1 560.0 320.0 Tm (0) Tj ET
+BT /F1 15 Tf 0.106 0.122 0.137 rg 1 0 0 1 720.0 320.0 Tm ($0.00) Tj ET
+BT /F1 15 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 294.0 Tm (Perf measurement \(~1,400 iterations\)) Tj ET
+BT /F1 15 Tf 0.106 0.122 0.137 rg 1 0 0 1 560.0 294.0 Tm (0) Tj ET
+BT /F1 15 Tf 0.106 0.122 0.137 rg 1 0 0 1 720.0 294.0 Tm ($0.00) Tj ET
+BT /F1 15 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 268.0 Tm (Local demo \(loopback HTTP\)) Tj ET
+BT /F1 15 Tf 0.106 0.122 0.137 rg 1 0 0 1 560.0 268.0 Tm (0) Tj ET
+BT /F1 15 Tf 0.106 0.122 0.137 rg 1 0 0 1 720.0 268.0 Tm ($0.00) Tj ET
+BT /F1 15 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 242.0 Tm (Live demo allowance \(declared\)) Tj ET
+BT /F1 15 Tf 0.106 0.122 0.137 rg 1 0 0 1 560.0 242.0 Tm (~10) Tj ET
+BT /F1 15 Tf 0.106 0.122 0.137 rg 1 0 0 1 720.0 242.0 Tm (~$1.00 - not spent) Tj ET
+0.949 0.957 0.965 rg 48.0 210.0 864.0 26.0 re f
+BT /F2 15 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 216.0 Tm (TOTAL SPENT) Tj ET
+BT /F2 15 Tf 0.106 0.122 0.137 rg 1 0 0 1 560.0 216.0 Tm (0) Tj ET
+BT /F2 15 Tf 0.106 0.122 0.137 rg 1 0 0 1 720.0 216.0 Tm ($0.00) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 194.0 Tm (- Assumptions: stub mode, no keys used, pay-per-token pricing if wired) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 173.0 Tm (- Teaching figures if a model were wired: small chat ~$0.001 per demo run) Tj ET
+0.850 0.870 0.890 RG 1.0 w 40.0 46.0 m 920.0 46.0 l S
+BT /F1 11 Tf 0.420 0.450 0.480 rg 1 0 0 1 40.0 26.0 Tm (Module 4 Capstone - presented Week 12 Monday) Tj ET
+BT /F1 11 Tf 0.420 0.450 0.480 rg 1 0 0 1 880.0 26.0 Tm (8 / 10) Tj ET
+endstream
+endobj
+21 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 20 0 R >>
+endobj
+22 0 obj
+<< /Length 2279 >>
+stream
+1.000 1.000 1.000 rg 0.0 0.0 960.0 540.0 re f
+0.055 0.463 0.431 rg 0.0 466.0 960.0 74.0 re f
+0.914 0.635 0.157 rg 0.0 460.0 960.0 6.0 re f
+BT /F2 26 Tf 1.000 1.000 1.000 rg 1 0 0 1 40.0 490.0 Tm (9. What works vs deferred) Tj ET
+BT /F1 14 Tf 1.000 1.000 1.000 rg 1 0 0 1 760.0 494.0 Tm (AfyaPlus Capstone) Tj ET
+0.949 0.957 0.965 rg 50.0 184.0 420.0 264.0 re f
+0.055 0.463 0.431 rg 50.0 184.0 420.0 5.0 re f
+BT /F2 16 Tf 0.106 0.122 0.137 rg 1 0 0 1 64.0 404.0 Tm (Works \(evidence linked\)) Tj ET
+BT /F1 13 Tf 0.106 0.122 0.137 rg 1 0 0 1 64.0 372.0 Tm (- One-command pipeline + eval 1.0000) Tj ET
+BT /F1 13 Tf 0.106 0.122 0.137 rg 1 0 0 1 64.0 348.0 Tm (- API: auth, validation, redaction) Tj ET
+BT /F1 13 Tf 0.106 0.122 0.137 rg 1 0 0 1 64.0 324.0 Tm (- 55 + 12 tests green \(captured\)) Tj ET
+BT /F1 13 Tf 0.106 0.122 0.137 rg 1 0 0 1 64.0 300.0 Tm (- Pins verified, perf measured) Tj ET
+BT /F1 13 Tf 0.106 0.122 0.137 rg 1 0 0 1 64.0 276.0 Tm (- Fixtures 300 + 200, no PII) Tj ET
+BT /F1 13 Tf 0.106 0.122 0.137 rg 1 0 0 1 64.0 252.0 Tm (- Incident note: drift 0.6833 fixed) Tj ET
+0.949 0.957 0.965 rg 490.0 184.0 420.0 264.0 re f
+0.914 0.635 0.157 rg 490.0 184.0 420.0 5.0 re f
+BT /F2 16 Tf 0.106 0.122 0.137 rg 1 0 0 1 504.0 404.0 Tm (Deferred \(declared\)) Tj ET
+BT /F1 13 Tf 0.106 0.122 0.137 rg 1 0 0 1 504.0 372.0 Tm (- Live LLM backend - stub path taken) Tj ET
+BT /F1 13 Tf 0.106 0.122 0.137 rg 1 0 0 1 504.0 348.0 Tm (- Real MCP server - fallback reason shown) Tj ET
+BT /F1 13 Tf 0.106 0.122 0.137 rg 1 0 0 1 504.0 324.0 Tm (- Docker build - not installed here) Tj ET
+BT /F1 13 Tf 0.106 0.122 0.137 rg 1 0 0 1 504.0 300.0 Tm (- Cloud deploy - no creds, docs only) Tj ET
+BT /F1 13 Tf 0.106 0.122 0.137 rg 1 0 0 1 504.0 276.0 Tm (- Embeddings - deterministic overlap) Tj ET
+BT /F1 13 Tf 0.106 0.122 0.137 rg 1 0 0 1 504.0 252.0 Tm (- Streaming / persistence - out of scope) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 144.0 Tm (- Eval caveat: labels share the runtime policy - regression guard, not clinical validation) Tj ET
+0.850 0.870 0.890 RG 1.0 w 40.0 46.0 m 920.0 46.0 l S
+BT /F1 11 Tf 0.420 0.450 0.480 rg 1 0 0 1 40.0 26.0 Tm (Module 4 Capstone - presented Week 12 Monday) Tj ET
+BT /F1 11 Tf 0.420 0.450 0.480 rg 1 0 0 1 880.0 26.0 Tm (9 / 10) Tj ET
+endstream
+endobj
+23 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 22 0 R >>
+endobj
+24 0 obj
+<< /Length 1605 >>
+stream
+1.000 1.000 1.000 rg 0.0 0.0 960.0 540.0 re f
+0.055 0.463 0.431 rg 0.0 466.0 960.0 74.0 re f
+0.914 0.635 0.157 rg 0.0 460.0 960.0 6.0 re f
+BT /F2 26 Tf 1.000 1.000 1.000 rg 1 0 0 1 40.0 490.0 Tm (10. Process) Tj ET
+BT /F1 14 Tf 1.000 1.000 1.000 rg 1 0 0 1 760.0 494.0 Tm (AfyaPlus Capstone) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 424.0 Tm (- Git: main = scaffold, feature/module4-capstone = work, merged --no-ff) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 403.0 Tm (- History includes the red -> green fix \(06ec11a\), not a squashed snapshot) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 382.0 Tm (- Peer review: Alvin Swalah, 12-item checklist, 5 findings - all re-verified) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 361.0 Tm (- CI: .github/workflows/ci.yml runs tests + eval \(EVAL SCORE in logs\)) Tj ET
+BT /F2 16.5 Tf 0.035 0.302 0.282 rg 1 0 0 1 50.0 318.0 Tm (Next steps) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 294.0 Tm (- Push the repo, open the PR, present Week 12 Monday) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 273.0 Tm (- Optionally wire a live model behind the same interface \(budget ~$1\)) Tj ET
+0.949 0.957 0.965 rg 48.0 235.0 864.0 22.0 re f
+BT /F3 13 Tf 0.035 0.302 0.282 rg 1 0 0 1 58.0 240.0 Tm (Questions? - deck, transcript and evidence all live in this repo.) Tj ET
+0.850 0.870 0.890 RG 1.0 w 40.0 46.0 m 920.0 46.0 l S
+BT /F1 11 Tf 0.420 0.450 0.480 rg 1 0 0 1 40.0 26.0 Tm (Module 4 Capstone - presented Week 12 Monday) Tj ET
+BT /F1 11 Tf 0.420 0.450 0.480 rg 1 0 0 1 880.0 26.0 Tm (10 / 10) Tj ET
+endstream
+endobj
+25 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 24 0 R >>
+endobj
+xref
+0 26
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000184 00000 n 
+0000000281 00000 n 
+0000000383 00000 n 
+0000000478 00000 n 
+0000002085 00000 n 
+0000002231 00000 n 
+0000004060 00000 n 
+0000004206 00000 n 
+0000007235 00000 n 
+0000007383 00000 n 
+0000009732 00000 n 
+0000009880 00000 n 
+0000011772 00000 n 
+0000011920 00000 n 
+0000013788 00000 n 
+0000013936 00000 n 
+0000015568 00000 n 
+0000015716 00000 n 
+0000018537 00000 n 
+0000018685 00000 n 
+0000021017 00000 n 
+0000021165 00000 n 
+0000022823 00000 n 
+trailer
+<< /Size 26 /Root 1 0 R >>
+startxref
+22971
+%%EOF

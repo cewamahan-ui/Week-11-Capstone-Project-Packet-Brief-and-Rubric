@@ -1,0 +1,11 @@
+EVAL SCORE (pre-fix): 0.6833
+rows: 300 exact: 205 mismatches: 95
+acuity_accuracy: 0.97
+recommendation_accuracy: 0.97
+endpoint_accuracy: 0.7133
+first 5 mismatches:
+  {'id': 'triage-0003', 'got': {'acuity': 'high', 'recommendation': 'immediate_attention', 'endpoint': 'general_practice'}, 'expected': {'acuity': 'high', 'recommendation': 'immediate_attention', 'endpoint': 'urgent_care'}}
+  {'id': 'triage-0005', 'got': {'acuity': 'high', 'recommendation': 'immediate_attention', 'endpoint': 'primary_care'}, 'expected': {'acuity': 'high', 'recommendation': 'immediate_attention', 'endpoint': 'urgent_care'}}
+  {'id': 'triage-0007', 'got': {'acuity': 'high', 'recommendation': 'immediate_attention', 'endpoint': 'general_practice'}, 'expected': {'acuity': 'high', 'recommendation': 'immediate_attention', 'endpoint': 'urgent_care'}}
+  {'id': 'triage-0009', 'got': {'acuity': 'moderate', 'recommendation': 'within_24_hours', 'endpoint': 'emergency_department'}, 'expected': {'acuity': 'high', 'recommendation': 'immediate_attention', 'endpoint': 'emergency_department'}}
+  {'id': 'triage-0010', 'got': {'acuity': 'high', 'recommendation': 'immediate_attention', 'endpoint': 'primary_care'}, 'expected': {'acuity': 'high', 'recommendation': 'immediate_attention', 'endpoint': 'urgent_care'}}

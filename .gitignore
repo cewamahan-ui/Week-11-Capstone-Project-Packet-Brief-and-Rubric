@@ -19,6 +19,3 @@ Thumbs.db
 .DS_Store
 .idea/
 .vscode/
-
-# Local tooling
-.freebuff/
