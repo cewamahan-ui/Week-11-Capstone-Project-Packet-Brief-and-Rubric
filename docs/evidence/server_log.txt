@@ -1,0 +1,25 @@
+INFO:     Started server process [11776]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8011 (Press CTRL+C to quit)
+AfyaPlus triage API on http://127.0.0.1:8011  (mode=stub)
+INFO:     127.0.0.1:54601 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54602 - "POST /token HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54604 - "POST /token HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54608 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54609 - "POST /token HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54611 - "POST /triage HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:54612 - "POST /triage HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:54613 - "POST /triage HTTP/1.1" 422 Unprocessable Content
+triage request_id=c6b84d591b0a sub=demo-clinician endpoint=urgent_care acuity=high note='Call [PHONE] or [EMAIL] about the fever'
+INFO:     127.0.0.1:54617 - "POST /triage HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55710 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55711 - "POST /token HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55713 - "POST /token HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55714 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55715 - "POST /token HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55717 - "POST /triage HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:55718 - "POST /triage HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:55719 - "POST /triage HTTP/1.1" 422 Unprocessable Content
+triage request_id=7eac27885dd7 sub=demo-clinician endpoint=urgent_care acuity=high note='Call [PHONE] or [EMAIL] about the fever'
+INFO:     127.0.0.1:55720 - "POST /triage HTTP/1.1" 200 OK

@@ -1,8 +1,9 @@
 {
   "deliverable_1": {
     "brief": "proposal.md",
-    "matrix": "skill_matrix.md", 
-    "integration": "integration_map.json"
+    "matrix": "skill_matrix.md",
+    "integration": "integration_map.json",
+    "readme": "README.md"
   },
   "deliverable_2": {
     "pytest_configuration": "pytest.ini",
@@ -11,21 +12,37 @@
       "domain_twin": "tests/test_domain_twin.py",
       "gold_fixture": "tests/test_gold_fixture.py",
       "stub_service": "tests/test_service_function_stub.py",
-      "pin_fields": "tests/test_pin_fields.py"
+      "pin_fields": "tests/test_pin_fields.py",
+      "rag": "tests/test_rag.py",
+      "catalog": "tests/test_catalog.py"
     },
     "security_smoke": {
       "test_file": "tests/test_security_smoke.py",
-      "redaction_test": "test_pii_redaction_integration"
+      "redaction_test": "test_pii_redaction_integration",
+      "repo_secret_scan": "test_no_secrets_committed",
+      "fixture_pii_scan": "test_fixture_contains_no_direct_identifiers"
     },
     "performance": {
       "measured_file": "perf_stub.json",
-      "measurement_script": "scripts/measure_perf.py"
+      "measurement_script": "scripts/measure_perf.py",
+      "captured_output": "docs/evidence/perf_measurement.txt"
     },
+    "incident_note": "docs/incidents/2026-10-13-fixture-label-drift.md",
+    "incident_evidence": [
+      "docs/evidence/gold_fixture_pre_fix_failure.txt",
+      "docs/evidence/gold_fixture_vitals_drop_failure.txt",
+      "docs/evidence/eval_pre_fix.txt"
+    ],
     "ci_presence": ".github/workflows/ci.yml"
   },
   "deliverable_3": {
     "end_to_end_command": "python -m src.afyaplus.main",
     "transcript_evidence": "docs/demo_transcript.md",
+    "raw_captures": [
+      "docs/evidence/end_to_end_run.txt",
+      "docs/evidence/api_transcript.txt",
+      "docs/evidence/server_log.txt"
+    ],
     "mwp_components": {
       "auth": "src/afyaplus/triage/auth.py",
       "rag": "src/afyaplus/rag/",
@@ -41,10 +58,12 @@
     "deployment": "docs/deployment.md",
     "cost_analysis": "docs/cost_analysis.md",
     "user_guide": "docs/user_guide.md",
-    "build_checkpoint": "docs/build_checkpoint.md"
+    "build_checkpoint": "docs/build_checkpoint.md",
+    "fixture_readme": "fixtures/README.md"
   },
   "deliverable_5": {
     "feature_branch_history": ".git/refs/heads/",
+    "branch": "feature/module4-capstone",
     "peer_review_checklist": "docs/peer_review_checklist.md",
     "review_log": "review_log.md",
     "sprint_board": "sprint_board.json"
@@ -53,5 +72,96 @@
     "presentation": "docs/presentation.pdf",
     "presentation_outline": "docs/presentation_outline.md",
     "demo_command": "start_service.sh"
+  },
+  "week_reuse": {
+    "note": "Programme artefact paths live in the course workspace (week folders next to this repo) and are not shipped; capstone paths exist in this repo.",
+    "weeks_1_5": {
+      "programme_artefacts": [
+        "week 2/course work/lab11_rag.py",
+        "week 3/evaluation/evaluation_data.py",
+        "week 3/drift/run_drift_reports.py",
+        "week 5/AfyaPlus Multimodal Intake Assistant/router.py"
+      ],
+      "capstone_artefacts": [
+        "src/afyaplus/rag/retriever.py",
+        "src/afyaplus/rag/ingest.py",
+        "src/afyaplus/router/deterministic.py",
+        "src/afyaplus/evaluation.py",
+        "tests/test_rag.py"
+      ]
+    },
+    "week_6": {
+      "programme_artefacts": [
+        "week 6/agent/api.py",
+        "week 6/agent/mcp_client.py",
+        "week 6/evidence/curl_200.txt"
+      ],
+      "capstone_artefacts": [
+        "src/afyaplus/triage/api.py",
+        "src/afyaplus/triage/auth.py",
+        "src/afyaplus/triage/models.py",
+        "tests/test_api.py",
+        "docs/evidence/api_transcript.txt"
+      ]
+    },
+    "week_7": {
+      "programme_artefacts": [
+        "week 7/capstone 7/cost",
+        "week 7/capstone 7/exec"
+      ],
+      "capstone_artefacts": [
+        "src/afyaplus/mcp/tools.py",
+        "src/afyaplus/mcp/cost_tracker.py",
+        "docs/cost_analysis.md"
+      ]
+    },
+    "week_8": {
+      "programme_artefacts": [
+        "week 8/capstone 8/check_prompt_pin.py",
+        "week 8/capstone 8/corpus_pin.py",
+        "week 8/capstone 8/CHANGELOG.md"
+      ],
+      "capstone_artefacts": [
+        "src/afyaplus/pins/manifest.py",
+        "src/afyaplus/pins/manifest.json",
+        "src/afyaplus/pins/manager.py",
+        "tests/test_pin_fields.py",
+        "requirements.txt"
+      ]
+    },
+    "week_9": {
+      "programme_artefacts": [
+        "week 9/capstone 9/injection_guard.py",
+        "week 9/capstone 9/rbac.py",
+        "week 9/capstone 9/check_gitignore.py"
+      ],
+      "capstone_artefacts": [
+        "src/afyaplus/security/redaction.py",
+        "tests/test_security_smoke.py",
+        ".gitignore"
+      ]
+    },
+    "week_10": {
+      "programme_artefacts": [
+        "week 10/capstone 10/catalog.json",
+        "week 10/capstone 10/fixtures",
+        "week 10/capstone 10/encoder_pin.json"
+      ],
+      "capstone_artefacts": [
+        "src/afyaplus/catalog/service.py",
+        "fixtures/catalog_listings_sample.jsonl",
+        "tests/test_catalog.py"
+      ],
+      "path_taken": "catalog (clinic-poster transfer not taken)"
+    }
+  },
+  "evidence": {
+    "pytest_unit": "docs/evidence/pytest_unit.txt",
+    "pytest_integration": "docs/evidence/pytest_integration.txt",
+    "eval_score": "docs/evidence/eval_score.txt",
+    "end_to_end": "docs/evidence/end_to_end_run.txt",
+    "api_transcript": "docs/evidence/api_transcript.txt",
+    "server_log": "docs/evidence/server_log.txt",
+    "perf": "docs/evidence/perf_measurement.txt"
   }
 }

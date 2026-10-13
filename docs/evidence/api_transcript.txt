@@ -1,0 +1,57 @@
+# AfyaPlus API transcript (captured 2026-10-12T23:34:03Z, stub mode, server on 127.0.0.1:8011)
+
+$ curl -i $BASE/health
+HTTP/1.1 200 OK
+date: Mon, 12 Oct 2026 23:34:02 GMT
+server: uvicorn
+content-length: 149
+content-type: application/json
+
+{"status":"ok","service":"afyaplus-triage","version":"1.0.0","mode":"stub","build_sha":"2026-10-12T23:22:38Z","pins_ok":true,"uptime_seconds":286.46}
+
+$ curl -i -X POST $BASE/token -d '{"client_id":"demo-clinician","role":"clinician"}'
+(access_token truncated here - local demo token, 1h TTL)
+HTTP/1.1 200 OK
+date: Mon, 12 Oct 2026 23:34:03 GMT
+server: uvicorn
+content-length: 246
+content-type: application/json
+
+{"access_token":"eyJhbGciOiJIUzI1NiITRUNCATED","token_type":"bearer","role":"clinician"}
+
+$ curl -i -X POST $BASE/triage -d '{...}'   # no token
+HTTP/1.1 401 Unauthorized
+date: Mon, 12 Oct 2026 23:34:03 GMT
+server: uvicorn
+www-authenticate: Bearer
+content-length: 33
+content-type: application/json
+
+{"detail":"missing bearer token"}
+
+$ curl -i -X POST $BASE/triage -H "Authorization: Bearer $VIEWER" -d '{...}'   # viewer role
+HTTP/1.1 403 Forbidden
+date: Mon, 12 Oct 2026 23:34:05 GMT
+server: uvicorn
+content-length: 43
+content-type: application/json
+
+{"detail":"role 'viewer' is not permitted"}
+
+$ curl -i -X POST $BASE/triage -H "Authorization: Bearer $TOKEN" -d '{"age":-3,...}'   # invalid age
+HTTP/1.1 422 Unprocessable Content
+date: Mon, 12 Oct 2026 23:34:05 GMT
+server: uvicorn
+content-length: 140
+content-type: application/json
+
+{"detail":[{"type":"greater_than_equal","loc":["body","age"],"msg":"Input should be greater than or equal to 0","input":-3,"ctx":{"ge":0}}]}
+
+$ curl -i -X POST $BASE/triage -H "Authorization: Bearer $TOKEN" -d '{...note carrying PII}'
+HTTP/1.1 200 OK
+date: Mon, 12 Oct 2026 23:34:06 GMT
+server: uvicorn
+content-length: 358
+content-type: application/json
+
+{"acuity":"high","recommendation":"immediate_attention","priority":4,"confidence_score":0.99,"reasons":["patient_reported_urgency=moderate","clinical_severity=high","escalated_from_patient_report=moderate","vitals_considered","age_band_escalation","endpoint=urgent_care"],"request_id":"7eac27885dd7","redacted_note":"Call [PHONE] or [EMAIL] about the fever"}

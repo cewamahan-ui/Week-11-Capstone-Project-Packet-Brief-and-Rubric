@@ -1,0 +1,40 @@
+{
+  "board": "module4-capstone week 11",
+  "updated": "2026-10-13",
+  "columns": [
+    {
+      "name": "done",
+      "items": [
+        {"id": "W11-1", "title": "proposal.md, skill_matrix.md, integration_map.json", "deliverable": 1},
+        {"id": "W11-2", "title": "pytest.ini with unit default + integration/security markers", "deliverable": 2},
+        {"id": "W11-3", "title": "Unit tests: router, domain twin, gold fixture, service stub", "deliverable": 2},
+        {"id": "W11-4", "title": "Pin-fields test + regenerated pin manifest", "deliverable": 2},
+        {"id": "W11-5", "title": "Security smoke with real redaction test + repo secret scan", "deliverable": 2},
+        {"id": "W11-6", "title": "Golden fixture incident: shared policy fix, 0.6833 -> 1.0000", "deliverable": 2},
+        {"id": "W11-7", "title": "Measured perf_stub.json from scripts/measure_perf.py", "deliverable": 2},
+        {"id": "W11-8", "title": "ci.yml with pytest, integration, eval score steps", "deliverable": 2},
+        {"id": "W11-9", "title": "One-command pipeline + HTTP demo transcripts", "deliverable": 3},
+        {"id": "W11-10", "title": "MWP layers: auth, RAG, MCP stub, pins, security smoke, eval, fixture", "deliverable": 3},
+        {"id": "W11-11", "title": "Documentation pack (5 docs + fixture README + incident note)", "deliverable": 4},
+        {"id": "W11-12", "title": "Feature branch + peer review (Alvin Swalah) + review_log", "deliverable": 5},
+        {"id": "W11-13", "title": "Fixtures: 300 triage + 200 catalog rows, seeded, no-scrape", "deliverable": 4}
+      ]
+    },
+    {
+      "name": "in progress",
+      "items": [
+        {"id": "W11-14", "title": "Slides: presentation_outline.md + docs/presentation.pdf", "deliverable": 6},
+        {"id": "W11-15", "title": "README with week reuse, evidence links, declared fallbacks", "deliverable": 1},
+        {"id": "W11-16", "title": "Final audit: paths in integration_map, secrets scan, merge to main", "deliverable": 5}
+      ]
+    },
+    {
+      "name": "deferred",
+      "items": [
+        {"id": "W11-17", "title": "Live LLM backend (stub fallback declared, $1 allowance unspent)", "reason": "no live key used; tests mandate stub mode"},
+        {"id": "W11-18", "title": "Docker image build + cloud deploy", "reason": "docker/cloud creds unavailable; marked not executed live"},
+        {"id": "W11-19", "title": "Real MCP server wiring", "reason": "AFYA_MCP_URL unset by design; deterministic stub fallback"}
+      ]
+    }
+  ]
+}
