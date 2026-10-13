@@ -127,7 +127,7 @@ SLIDES: list[dict] = [
             ("sp", ""),
             ("b", "Security smoke: real redaction test, repo secret scan, token tamper checks"),
             ("b", "Pin test: source digest + requirements must match the manifest"),
-            ("b", "Perf (p95): route 0.05ms | twin 0.15ms | retriever 0.87ms | HTTP 18.3ms"),
+            ("b", "Perf (p50): route 0.04ms | twin 0.06ms | retriever 0.17ms | HTTP 15.9ms"),
             ("sp", ""),
             ("h", "The test that earned its keep"),
             ("b", "Golden set caught label drift: pre-fix eval 0.6833, 95/300 rows wrong"),

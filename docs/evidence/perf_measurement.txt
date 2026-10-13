@@ -1,11 +1,11 @@
 C:\Users\RAJ\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
   from starlette.testclient import TestClient as TestClient  # noqa
 case                                p50 ms    p95 ms   mean ms    max ms
-router.route                         0.035     0.050     0.044     0.974
-domain_twin.assess                   0.054     0.151     0.105    10.845
-rag_retriever.search                 0.182     0.870     0.358     9.972
-mcp_tool.execute_stub                0.013     0.051     0.025     0.384
-security.redact                      0.040     0.141     0.084     5.925
-http_post_triage_inprocess           9.774    18.322    11.771    42.398
+router.route                         0.041     0.183     0.064     0.636
+domain_twin.assess                   0.062     0.292     0.100     1.298
+rag_retriever.search                 0.172     0.752     0.254     2.225
+mcp_tool.execute_stub                0.013     0.016     0.013     0.071
+security.redact                      0.039     0.084     0.050     0.847
+http_post_triage_inprocess          15.927    47.642    19.950    59.832
 
 wrote perf_stub.json

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T23:27:44Z",
+  "generated_at": "2026-10-13T00:38:54Z",
   "generated_by": "scripts/measure_perf.py",
   "environment": {
     "python": "3.14.3",
@@ -11,50 +11,50 @@
     {
       "case": "router.route",
       "iterations": 300,
-      "mean_ms": 0.0441,
-      "p50_ms": 0.0347,
-      "p95_ms": 0.0504,
-      "max_ms": 0.9735
+      "mean_ms": 0.0638,
+      "p50_ms": 0.041,
+      "p95_ms": 0.1835,
+      "max_ms": 0.6363
     },
     {
       "case": "domain_twin.assess",
       "iterations": 300,
-      "mean_ms": 0.1054,
-      "p50_ms": 0.0541,
-      "p95_ms": 0.1512,
-      "max_ms": 10.8445
+      "mean_ms": 0.0998,
+      "p50_ms": 0.0622,
+      "p95_ms": 0.2918,
+      "max_ms": 1.2975
     },
     {
       "case": "rag_retriever.search",
       "iterations": 300,
-      "mean_ms": 0.3577,
-      "p50_ms": 0.1821,
-      "p95_ms": 0.8704,
-      "max_ms": 9.9723
+      "mean_ms": 0.2538,
+      "p50_ms": 0.1717,
+      "p95_ms": 0.752,
+      "max_ms": 2.2253
     },
     {
       "case": "mcp_tool.execute_stub",
       "iterations": 300,
-      "mean_ms": 0.025,
-      "p50_ms": 0.0131,
-      "p95_ms": 0.0515,
-      "max_ms": 0.3844
+      "mean_ms": 0.0133,
+      "p50_ms": 0.0128,
+      "p95_ms": 0.0162,
+      "max_ms": 0.0709
     },
     {
       "case": "security.redact",
       "iterations": 300,
-      "mean_ms": 0.0839,
-      "p50_ms": 0.0396,
-      "p95_ms": 0.1408,
-      "max_ms": 5.9248
+      "mean_ms": 0.0504,
+      "p50_ms": 0.0392,
+      "p95_ms": 0.0837,
+      "max_ms": 0.8473
     },
     {
       "case": "http_post_triage_inprocess",
       "iterations": 100,
-      "mean_ms": 11.7714,
-      "p50_ms": 9.7738,
-      "p95_ms": 18.322,
-      "max_ms": 42.3984
+      "mean_ms": 19.9503,
+      "p50_ms": 15.9274,
+      "p95_ms": 47.6418,
+      "max_ms": 59.8324
     }
   ],
   "notes": "Measured locally on the stub path; no LLM or MCP server involved. The http case uses FastAPI's in-process TestClient, so it includes framework overhead but no socket latency."

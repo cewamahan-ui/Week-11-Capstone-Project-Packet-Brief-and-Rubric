@@ -8,10 +8,10 @@ captures live in `docs/evidence/`.
 
 ```bash
 $ pytest -q
-55 passed, 12 deselected, 1 warning in 2.35s
+55 passed, 12 deselected, 1 warning in 3.38s
 
 $ pytest -m integration
-12 passed, 55 deselected, 1 warning in 1.80s
+12 passed, 55 deselected, 1 warning in 2.71s
 ```
 
 Raw: `docs/evidence/pytest_unit.txt`, `docs/evidence/pytest_integration.txt`.
@@ -71,6 +71,10 @@ Raw: `docs/evidence/end_to_end_run.txt`.
 
 ## 3. HTTP demo (three commands)
 
+> Note: the captures in `docs/evidence/api_transcript.txt` were taken
+> on port 8013 to keep the default 8000 free during the session; the
+> responses below are identical on the default port.
+
 ### Command 1 - start the service
 
 ```bash
@@ -87,7 +91,7 @@ HTTP/1.1 200 OK
 content-type: application/json
 
 {"status":"ok","service":"afyaplus-triage","version":"1.0.0","mode":"stub",
- "build_sha":"2026-10-12T23:22:38Z","pins_ok":true,"uptime_seconds":286.46}
+ "build_sha":"2026-10-13T00:30:34Z","pins_ok":true,"uptime_seconds":32.643}
 ```
 
 ### Command 3 - token + triage
@@ -109,7 +113,7 @@ HTTP/1.1 200 OK
  "reasons":["patient_reported_urgency=moderate","clinical_severity=high",
             "escalated_from_patient_report=moderate","vitals_considered",
             "age_band_escalation","endpoint=urgent_care"],
- "request_id":"7eac27885dd7",
+ "request_id":"d7ad1f338c69",
  "redacted_note":"Call [PHONE] or [EMAIL] about the fever"}
 ```
 
@@ -120,7 +124,7 @@ headers in `docs/evidence/api_transcript.txt`.
 The server log line for that request shows the redacted note only:
 
 ```
-triage request_id=7eac27885dd7 sub=demo-clinician endpoint=urgent_care
+triage request_id=d7ad1f338c69 sub=demo-clinician endpoint=urgent_care
 acuity=high note='Call [PHONE] or [EMAIL] about the fever'
 ```
 
@@ -139,12 +143,12 @@ PASS: score 1.0 >= threshold 0.9
 
 $ python scripts/measure_perf.py
 case                                p50 ms    p95 ms   mean ms    max ms
-router.route                         0.035     0.050     0.044     0.974
-domain_twin.assess                   0.054     0.151     0.105    10.845
-rag_retriever.search                 0.182     0.870     0.358     9.972
-mcp_tool.execute_stub                0.013     0.051     0.025     0.384
-security.redact                      0.040     0.141     0.084     5.925
-http_post_triage_inprocess           9.774    18.322    11.771    42.398
+router.route                         0.041     0.183     0.064     0.636
+domain_twin.assess                   0.062     0.292     0.100     1.298
+rag_retriever.search                 0.172     0.752     0.254     2.225
+mcp_tool.execute_stub                0.013     0.016     0.013     0.071
+security.redact                      0.039     0.084     0.050     0.847
+http_post_triage_inprocess          15.927    47.642    19.950    59.832
 ```
 
 Raw: `docs/evidence/eval_score.txt`, `perf_stub.json`,

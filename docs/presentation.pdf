@@ -183,7 +183,7 @@ BT /F3 13 Tf 0.035 0.302 0.282 rg 1 0 0 1 58.0 402.0 Tm ($ pytest -m integration
 BT /F3 13 Tf 0.035 0.302 0.282 rg 1 0 0 1 58.0 380.0 Tm ($ python scripts/eval_score.py -> EVAL SCORE: 1.0000 \(300/300 rows\)) Tj ET
 BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 346.0 Tm (- Security smoke: real redaction test, repo secret scan, token tamper checks) Tj ET
 BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 325.0 Tm (- Pin test: source digest + requirements must match the manifest) Tj ET
-BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 304.0 Tm (- Perf \(p95\): route 0.05ms | twin 0.15ms | retriever 0.87ms | HTTP 18.3ms) Tj ET
+BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 304.0 Tm (- Perf \(p50\): route 0.04ms | twin 0.06ms | retriever 0.17ms | HTTP 15.9ms) Tj ET
 BT /F2 16.5 Tf 0.035 0.302 0.282 rg 1 0 0 1 50.0 261.0 Tm (The test that earned its keep) Tj ET
 BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 237.0 Tm (- Golden set caught label drift: pre-fix eval 0.6833, 95/300 rows wrong) Tj ET
 BT /F1 14.5 Tf 0.106 0.122 0.137 rg 1 0 0 1 56.0 216.0 Tm (- Fix: shared policy module - incident note in docs/incidents/) Tj ET

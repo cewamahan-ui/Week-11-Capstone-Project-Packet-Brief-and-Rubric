@@ -1,18 +1,18 @@
-# AfyaPlus API transcript (captured 2026-10-12T23:34:03Z, stub mode, server on 127.0.0.1:8011)
+# AfyaPlus API transcript (captured 2026-10-13T00:39:51Z, stub mode, server on 127.0.0.1:8013)
 
 $ curl -i $BASE/health
 HTTP/1.1 200 OK
-date: Mon, 12 Oct 2026 23:34:02 GMT
+date: Tue, 13 Oct 2026 00:39:51 GMT
 server: uvicorn
 content-length: 149
 content-type: application/json
 
-{"status":"ok","service":"afyaplus-triage","version":"1.0.0","mode":"stub","build_sha":"2026-10-12T23:22:38Z","pins_ok":true,"uptime_seconds":286.46}
+{"status":"ok","service":"afyaplus-triage","version":"1.0.0","mode":"stub","build_sha":"2026-10-13T00:30:34Z","pins_ok":true,"uptime_seconds":32.643}
 
 $ curl -i -X POST $BASE/token -d '{"client_id":"demo-clinician","role":"clinician"}'
-(access_token truncated here - local demo token, 1h TTL)
+(access_token truncated here - local demo token, 1h TTL, signed with an ephemeral process secret)
 HTTP/1.1 200 OK
-date: Mon, 12 Oct 2026 23:34:03 GMT
+date: Tue, 13 Oct 2026 00:39:51 GMT
 server: uvicorn
 content-length: 246
 content-type: application/json
@@ -21,7 +21,7 @@ content-type: application/json
 
 $ curl -i -X POST $BASE/triage -d '{...}'   # no token
 HTTP/1.1 401 Unauthorized
-date: Mon, 12 Oct 2026 23:34:03 GMT
+date: Tue, 13 Oct 2026 00:39:52 GMT
 server: uvicorn
 www-authenticate: Bearer
 content-length: 33
@@ -31,7 +31,7 @@ content-type: application/json
 
 $ curl -i -X POST $BASE/triage -H "Authorization: Bearer $VIEWER" -d '{...}'   # viewer role
 HTTP/1.1 403 Forbidden
-date: Mon, 12 Oct 2026 23:34:05 GMT
+date: Tue, 13 Oct 2026 00:39:52 GMT
 server: uvicorn
 content-length: 43
 content-type: application/json
@@ -40,7 +40,7 @@ content-type: application/json
 
 $ curl -i -X POST $BASE/triage -H "Authorization: Bearer $TOKEN" -d '{"age":-3,...}'   # invalid age
 HTTP/1.1 422 Unprocessable Content
-date: Mon, 12 Oct 2026 23:34:05 GMT
+date: Tue, 13 Oct 2026 00:39:52 GMT
 server: uvicorn
 content-length: 140
 content-type: application/json
@@ -49,9 +49,9 @@ content-type: application/json
 
 $ curl -i -X POST $BASE/triage -H "Authorization: Bearer $TOKEN" -d '{...note carrying PII}'
 HTTP/1.1 200 OK
-date: Mon, 12 Oct 2026 23:34:06 GMT
+date: Tue, 13 Oct 2026 00:39:53 GMT
 server: uvicorn
 content-length: 358
 content-type: application/json
 
-{"acuity":"high","recommendation":"immediate_attention","priority":4,"confidence_score":0.99,"reasons":["patient_reported_urgency=moderate","clinical_severity=high","escalated_from_patient_report=moderate","vitals_considered","age_band_escalation","endpoint=urgent_care"],"request_id":"7eac27885dd7","redacted_note":"Call [PHONE] or [EMAIL] about the fever"}
+{"acuity":"high","recommendation":"immediate_attention","priority":4,"confidence_score":0.99,"reasons":["patient_reported_urgency=moderate","clinical_severity=high","escalated_from_patient_report=moderate","vitals_considered","age_band_escalation","endpoint=urgent_care"],"request_id":"d7ad1f338c69","redacted_note":"Call [PHONE] or [EMAIL] about the fever"}
